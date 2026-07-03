@@ -1,0 +1,12 @@
+{
+  "name": "tifton-fitness-workout-dashboard",
+  "version": "24.2.0",
+  "private": true,
+  "description": "Tifton Fitness Workout Dashboard with Netlify Blobs client portal sync.",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@netlify/blobs": "10.7.9"
+  }
+}

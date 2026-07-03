@@ -53,3 +53,7 @@ This folder is intentionally deploy-ready at its top level: `index.html`, `clien
 Routes:
 - Admin dashboard: `/`
 - Client portal: `/client` (also works at `/client.html`)
+
+## v24.2 Netlify Functions dependency fix
+
+This release adds a top-level `package.json` and `package-lock.json` with the required `@netlify/blobs` dependency. Keep both files in the root of the `workoutdash` branch next to `netlify.toml`. Netlify installs root dependencies before packaging `netlify/functions/client-portal.js`.
