@@ -45,3 +45,11 @@ For a stronger production admin boundary, enable Netlify Identity with invite-on
 3. Publish manually once after meaningful edits or use the queued auto-publish.
 4. Client portals update within roughly 20 seconds while open; a refresh/login always pulls the newest published board.
 5. Export TXT periodically as an offline recovery backup.
+
+## v24.1 root-deploy packaging fix
+
+This folder is intentionally deploy-ready at its top level: `index.html`, `client.html`, `netlify.toml`, `_redirects`, and `netlify/functions/` are all in this folder's root. Deploy this folder itself (or the root-level ZIP) to the existing Netlify site. Do not deploy an outer folder that contains this folder.
+
+Routes:
+- Admin dashboard: `/`
+- Client portal: `/client` (also works at `/client.html`)

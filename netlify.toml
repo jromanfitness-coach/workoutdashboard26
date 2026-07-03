@@ -20,11 +20,24 @@
     Cache-Control = "no-store"
 
 [[headers]]
+  for = "/client/*"
+  [headers.values]
+    Cache-Control = "no-store"
+
+[[headers]]
   for = "/.netlify/functions/*"
   [headers.values]
     Cache-Control = "no-store"
 
+# Friendly client URL, with client/index.html also included as a static fallback.
 [[redirects]]
   from = "/client"
   to = "/client.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/client/"
+  to = "/client.html"
+  status = 200
+  force = true
